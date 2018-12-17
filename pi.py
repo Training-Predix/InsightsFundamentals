@@ -31,6 +31,7 @@ if __name__ == "__main__":
         .builder\
         .appName("PythonPi")\
         .getOrCreate()
+    spark.sparkContext.setLogLevel('ERROR')
 
     partitions = int(sys.argv[1]) if len(sys.argv) > 1 else 2
     n = 100000 * partitions

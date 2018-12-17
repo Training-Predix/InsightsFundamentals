@@ -10,6 +10,7 @@ if __name__ == "__main__":
         .builder \
         .appName("OneVsRestExample") \
         .getOrCreate()
+    spark.sparkContext.setLogLevel('ERROR')
 
     # load data file.
     cwd = os.getcwd()
